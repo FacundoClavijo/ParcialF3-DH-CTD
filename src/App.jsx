@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { useState } from 'react'
 import './App.css'
-import Card from './Card'
-import Form from './Form'
+import Form from './components/Form'
+import Card from './components/Card'
+
 
 function App() {
   
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <h1>Formulario de:</h1>
-      <Form></Form>
+      <Form/>
       <Card/>
     </>
   )

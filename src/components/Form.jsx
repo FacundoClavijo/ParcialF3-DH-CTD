@@ -1,10 +1,20 @@
 import React from 'react'
 
-const Form = () => {
+const Form = ({handleSubmit, setPersona}) => {
+  
   return (
     <>
-    <h1>Hola, soy un formulario</h1>
-        <form></form>
+      <div className="form-box">
+        <form onSubmit={handleSubmit}>
+            <label >Ingrese su nombre</label>
+            <input type='text' onChange={(e) => setPersona((state) =>({...state, nombre: e.target.value}))}/>
+            <label >Ingrese su apellido</label>
+            <input type='text' onChange={(e) => setPersona((state) =>({...state, apellido: e.target.value}))}/>
+            <label >Ingrese su edad</label>
+            <input type='text' onChange={(e) => setPersona((state) =>({...state, edad: e.target.value}))}/>
+            <button>enviar</button>
+        </form>
+        </div>
     </>
   )
 }
